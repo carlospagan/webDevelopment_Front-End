@@ -1,1 +1,1 @@
-# repository created to front-end exercises
+#REPOSITORY CREATED TO FRONT-END EXERCISES
