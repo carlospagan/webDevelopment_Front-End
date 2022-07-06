@@ -1,1 +1,1 @@
-# webDevelopment_Front-End
+# repository created to front-end exercises
