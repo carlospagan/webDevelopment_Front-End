@@ -1,1 +1,5 @@
 #REPOSITORY CREATED TO FRONT-END EXERCISES
+
+# TIPS
+
+    div.container*2>h2*2
