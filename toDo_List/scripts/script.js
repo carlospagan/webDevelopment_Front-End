@@ -1,3 +1,5 @@
+// <functions>
+
 async function apiCreateTask(description, complete){
     const newTask = {description, complete}
     const url = 'http://[::1]:3000/tasks'
@@ -14,7 +16,7 @@ async function apiCreateTask(description, complete){
 
 // apiCreateTask("Tarefa de teste", false)
 
-async function apiGetTaks(){
+async function apiGetTasks(){
     const url = 'http://[::1]:3000/tasks'
     const response = await fetch(url)
     return await response.json()
@@ -49,8 +51,31 @@ async function apiDeleteTaks(id){
     })
 }
 
-apiDeleteTaks(55)
+// apiDeleteTaks(55)
 
+// </functions>
 
+const addTaskButton = document.querySelector(".btn-adicionar")
+const taskToAdd = document.querySelector(".barra-pesquisa")
 
+addTaskButton.onclick = async () => { 
+    console.log("Task Adicionada")
+    apiCreateTask(taskToAdd.value, false)
 
+    getTasks = await apiGetTasks()
+
+    console.log(getTasks)
+
+    getTasks.forEach(task =>{
+        const elemento = document.createElement("div")
+        elemento.classList.add("checkbox")
+
+        const checkbox = document.createElement("input")
+        checkbox.type = "checkbox"
+
+        const taskDescription = document.createElement("label")
+        taskDescription.innerHTML = task.description
+
+    })
+    
+}
